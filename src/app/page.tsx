@@ -1,16 +1,20 @@
-// "use client"
+"use client"
 
-import { Heading, VStack, Text } from "@chakra-ui/react";
+import { Center, VStack, Heading, Text, Spinner} from "@chakra-ui/react";
 
-export default function Home() {
+export default function UnderConstruction() {
   return (
-    <>
-      <Heading size = "6xl">ヘッドコンポーネントテスト</Heading>
-      <Heading>テスト</Heading>    
-      <VStack gap='100px' >
-      <Text>テスト</Text>
-      <Text>テスト</Text>
+    <Center minH="100vh" bg="gray.50">
+      <VStack gap={6}>
+        <Spinner size="xl" color="teal.500" />
+        <Heading size="xl" color="teal.700">
+          制作中
+        </Heading>
+        <Text fontSize="lg" color="gray.600">
+          誠意制作です。しばらくお待ちください。
+        </Text>
       </VStack>
-    </>
+    </Center>
+    
   );
 }
