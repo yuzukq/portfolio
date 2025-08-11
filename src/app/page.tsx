@@ -1,9 +1,16 @@
-import Image from "next/image";
+// "use client"
+
+import { Heading, VStack, Text } from "@chakra-ui/react";
 
 export default function Home() {
   return (
     <>
-      <h1>Hello World</h1>
+      <Heading size = "6xl">ヘッドコンポーネントテスト</Heading>
+      <Heading>テスト</Heading>    
+      <VStack gap='100px' >
+      <Text>テスト</Text>
+      <Text>テスト</Text>
+      </VStack>
     </>
   );
 }
