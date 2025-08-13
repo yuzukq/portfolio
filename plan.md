@@ -23,7 +23,8 @@ src/
 │   ├── layouts/
 │   │   ├── MainLayout.tsx # ヘッダー・フッター・全セクションを並べる
 │   │   ├── Header.tsx
-│   │   └── Footer.tsx
+|   |   ├── Footer.tsx
+│   │   └── SectionContainer.tsx # 各セクションの大枠と背景
 │   │
 │   ├── sections/          # 大きな画面単位のコンポーネント群
 │   │   ├── TopSection.tsx

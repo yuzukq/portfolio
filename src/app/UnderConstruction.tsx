@@ -1,16 +1,11 @@
 import { Center, VStack, Heading, Text, Box, Container, Flex, IconButton, Link } from "@chakra-ui/react";
 import { FaDiscord, FaGithub } from "react-icons/fa";
+import { SectionContainer } from "../components/layouts/SectionContainer";
 
 export default function UnderConstruction() {
 
   return (
-    <Box 
-      minH="100vh"
-      bg="gray.900"
-      backgroundImage="linear-gradient(to bottom, rgba(59, 130, 246, 0.08) 0%, rgba(147, 51, 234, 0.05) 30%, rgba(17, 24, 39, 0.9) 100%)"
-      position="relative"
-      overflow="hidden"
-    >
+    <SectionContainer backgroundColor="dark" id="under-construction">
       <Center minH="100vh" position="relative" zIndex={1}>
         <Container maxW="container.lg" textAlign="center">
           <VStack gap={8}>
@@ -121,6 +116,6 @@ export default function UnderConstruction() {
           </VStack>
         </Container>
       </Center>
-    </Box>
+    </SectionContainer>
   );
 }
