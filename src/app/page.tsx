@@ -1,8 +1,12 @@
-"use client"
+ "use client"
 import UnderConstruction from "./UnderConstruction";
+import MainLayout from "@/components/layouts/MainLayout";
 
 export default function Page() {
   return (
-    <UnderConstruction />
+    <div>
+      <UnderConstruction />
+      {/* <MainLayout/> */}
+    </div>
   )
 }
