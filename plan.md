@@ -22,7 +22,10 @@ src/
 ├── components/
 │   ├── layouts/
 │   │   ├── MainLayout.tsx # ヘッダー・フッター・全セクションを並べる
-│   │   ├── Header.tsx
+│   │   ├── Header/
+│   │   │   ├── Header.tsx           # PC/モバイル共通のラッパー
+│   │   │   ├── HeaderDesktop.tsx    # PC用メニュー
+│   │   │   └── HeaderMobile.tsx     # モバイル用メニュー
 |   |   ├── Footer.tsx
 │   │   └── SectionContainer.tsx # 各セクションの大枠と背景
 │   │
@@ -43,7 +46,7 @@ src/
 │   │   └── SectionHeading.tsx # 各セクションの見出し用共通UI
 │   │
 │   └── modals/
-│       └── ProductDetailModal.tsx # 成果物詳細説明モーダル
+│       └── ProductDetailModal.tsx # 成果物詳細説明モーダル(Dialogコンポーネントを活用して表示)
 │
 ├── data/                   # 表示用のデータ定義
 │   ├── products.ts         # 成果物一覧データ

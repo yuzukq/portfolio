@@ -6,7 +6,7 @@ export default function Page() {
   return (
     <div>
       <UnderConstruction />
-      {/* <MainLayout/> */}
+      <MainLayout/>
     </div>
   )
 }
