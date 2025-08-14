@@ -22,7 +22,10 @@ src/
 ├── components/
 │   ├── layouts/
 │   │   ├── MainLayout.tsx # ヘッダー・フッター・全セクションを並べる
-│   │   ├── Header.tsx
+│   │   ├── Header/
+│   │   │   ├── Header.tsx           # PC/モバイル共通のラッパー
+│   │   │   ├── HeaderDesktop.tsx    # PC用メニュー
+│   │   │   └── HeaderMobile.tsx     # モバイル用メニュー
 |   |   ├── Footer.tsx
 │   │   └── SectionContainer.tsx # 各セクションの大枠と背景
 │   │

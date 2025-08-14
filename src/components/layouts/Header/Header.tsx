@@ -6,6 +6,8 @@ import {
   Link, 
   useBreakpointValue
 } from "@chakra-ui/react"
+import HeaderDesktop from "./HeaderDesktop"
+import HeaderMobile from "./HeaderMobile"
 
 
 export default function Header() {
@@ -36,27 +38,8 @@ export default function Header() {
         boxShadow: "lg"
       }}
     >
-
-      {/* PC表示 */}
-      <HStack gap={10} display={{ base: "none", md: "flex" }} justifyContent="center" py={2}>
-        {menuItems.map((item) => (
-          <Link
-            key={item.href}
-            href={item.href}
-            px={3}
-            py={2}
-            _hover={{
-              bg: "gray.900",
-              transform: "translateY(-2px)",
-              transition: "all 0.2s ease"
-            }}
-            transition="all 0.2s ease"
-          >
-            {item.label}
-          </Link>
-        ))}
-      </HStack>
-    
+      {isMobile ? <HeaderMobile items={menuItems}/> : <HeaderDesktop items={menuItems}/>}
+      {/* <HeaderDesktop items={menuItems}/> */}
     </Box>
   )
 }
