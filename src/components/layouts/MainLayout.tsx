@@ -3,8 +3,7 @@ import Footer from "./Footer";
 
 import TopSection from "@/components/sections/TopSection";
 import AboutSection from "@/components/sections/AboutSection";
-import TopSection from "../sections/TopSection";
-import StorySection from "../sections/StorySection";
+import StorySection from "@/components/sections/StorySection";
 
 
 export default function MainLayout() {
