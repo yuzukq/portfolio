@@ -1,7 +1,11 @@
 import Header from "./Header/Header";
 import Footer from "./Footer";
+
 import TopSection from "@/components/sections/TopSection";
 import AboutSection from "@/components/sections/AboutSection";
+import TopSection from "../sections/TopSection";
+import StorySection from "../sections/StorySection";
+
 
 export default function MainLayout() {
   return (
@@ -9,6 +13,7 @@ export default function MainLayout() {
       <Header />
       <TopSection />
       <AboutSection />
+      <StorySection />
       <Footer />
     </div>
   )
