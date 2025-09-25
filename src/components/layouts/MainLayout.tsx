@@ -13,8 +13,8 @@ export default function MainLayout() {
       <Header />
       <TopSection />
       <AboutSection />
-      <StorySection />
       <ProductSection />
+      <StorySection />
       <Footer />
     </div>
   )
