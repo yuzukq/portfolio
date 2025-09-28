@@ -33,16 +33,22 @@ export default function ProductDetailOverlay({ product, isOpen, onClose }: Produ
       }
     };
 
+    let originalOverflow: string;
+
     if (isOpen) {
       document.addEventListener("keydown", handleKeyDown);
+      // 元のoverflow値を記憶
+      originalOverflow = document.body.style.overflow;
       // ボディのスクロール無効化
       document.body.style.overflow = "hidden";
     }
 
     return () => {
       document.removeEventListener("keydown", handleKeyDown);
-      // ボディのスクロールを復元
-      document.body.style.overflow = "unset";
+      // 元のoverflow値を復元
+      if (isOpen) {
+        document.body.style.overflow = originalOverflow;
+      }
     };
   }, [isOpen, onClose]);
 
