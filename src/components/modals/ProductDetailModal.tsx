@@ -17,10 +17,12 @@ import {
   Link,
   Icon,
   Flex,
-  Separator
+  Separator,
+  Portal
 } from "@chakra-ui/react";
 import { FaGithub, FaExternalLinkAlt, FaDesktop } from "react-icons/fa";
 import { Product } from "@/data/products";
+import { useEffect } from "react";
 
 interface ProductDetailModalProps {
   product: Product;
@@ -29,9 +31,45 @@ interface ProductDetailModalProps {
 }
 
 export default function ProductDetailModal({ product, isOpen, onClose }: ProductDetailModalProps) {
+  // エスケープキーでモーダルを閉じる
+  useEffect(() => {
+    const handleKeyDown = (event: KeyboardEvent) => {
+      if (event.key === "Escape" && isOpen) {
+        onClose();
+      }
+    };
+
+    if (isOpen) {
+      document.addEventListener("keydown", handleKeyDown);
+      // ボディのスクロールを無効化
+      document.body.style.overflow = "hidden";
+    }
+
+    return () => {
+      document.removeEventListener("keydown", handleKeyDown);
+      // ボディのスクロールを復元
+      document.body.style.overflow = "unset";
+    };
+  }, [isOpen, onClose]);
+
+  if (!isOpen) return null;
+
   return (
-    <DialogRoot open={isOpen} onInteractOutside={onClose}>
-      <DialogContent maxW="4xl" maxH="90vh" overflow="auto">
+    <Portal>
+      <DialogRoot open={isOpen} onInteractOutside={onClose}>
+        <DialogContent 
+          maxW="4xl" 
+          maxH="90vh" 
+          overflow="auto"
+          position="fixed"
+          top="50%"
+          left="50%"
+          transform="translate(-50%, -50%)"
+          zIndex="modal"
+          bg="gray.800"
+          borderRadius="xl"
+          boxShadow="2xl"
+        >
         <DialogHeader>
           <DialogTitle fontSize="2xl" fontWeight="bold">
             {product.title}
@@ -166,7 +204,22 @@ export default function ProductDetailModal({ product, isOpen, onClose }: Product
             </Box>
           </Flex>
         </DialogBody>
-      </DialogContent>
-    </DialogRoot>
+        </DialogContent>
+      </DialogRoot>
+      
+      {/* オーバーレイ背景 */}
+      {isOpen && (
+        <Box
+          position="fixed"
+          top="0"
+          left="0"
+          right="0"
+          bottom="0"
+          bg="blackAlpha.700"
+          zIndex="overlay"
+          onClick={onClose}
+        />
+      )}
+    </Portal>
   );
 }

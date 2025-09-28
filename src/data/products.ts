@@ -1,3 +1,5 @@
+// プロダクトのデータを記述するファイル．フロント側は触らずともここに追加すればカードが増えます
+
 export interface Product {
   id: string;
   title: string;
@@ -39,21 +41,19 @@ export const products: Product[] = [
     }
   },
   {
-    id: "task-manager",
-    title: "Task Management App",
+    id: "better-portal-extension",
+    title: "Better Portal Extension",
     thumbnail: "/img/icon-vr.png", 
-    techStack: ["React", "Node.js", "Express", "MongoDB"],
-    description: "チーム向けのタスク管理アプリケーション。リアルタイム同期機能とカンバンボード形式でのタスク管理を実現。",
+    techStack: ["HTML", "CSS", "JavaScript", "Chrome Extension API"],
+    description: "大学で運用されているポータルサイトのUI/UXを改善するために開発したChrome拡張機能です．",
     features: [
       "リアルタイム同期",
-      "カンバンボード",
-      "チーム管理機能",
-      "通知システム"
+      "ストアからインストールするだけで利用可能",
+      "ポータルサイトのデザインをカスタマイズできる",
     ],
     challenges: [
-      "WebSocketを使った リアルタイム通信の実装",
-      "状態管理の複雑さへの対応",
-      "スケーラブルなデータベース設計"
+      "Chrome Extension APIの習得",
+      "非エンジニア層が利用できるようにGUIデザインを工夫",
     ],
     screenshots: ["/img/icon-vr.png"],
     urls: {
@@ -65,23 +65,44 @@ export const products: Product[] = [
     id: "weather-app",
     title: "Weather Dashboard",
     thumbnail: "/img/icon-vr.png",
-    techStack: ["Vue.js", "TypeScript", "Chart.js", "OpenWeather API"],
+    techStack: ["HTML", "CSS", "JavaScript"],
     description: "天気情報ダッシュボード。複数の都市の天気予報を視覚的に表示し、グラフ機能で天気の推移を確認できます。",
     features: [
-      "複数都市対応",
-      "グラフ表示機能",
-      "予報データの可視化",
-      "位置情報連携"
+      "Test",
+      "Test",
+      "Test"
     ],
     challenges: [
-      "外部APIとの連携",
-      "データの可視化処理",
-      "エラーハンドリングの実装"
+      "Test",
+      "Test",
+      "Test"
     ],
     screenshots: ["/img/icon-vr.png", "/img/icon-vr.png"],
     urls: {
-      demo: "https://weather-dashboard.example.com",
-      github: "https://github.com/yuzukq/weather-app"
+      demo: "https://test.example.com",
+      github: "https://github.com/yuzukq/test"
+    }
+  },
+  {
+    id: "test",
+    title: "Test",
+    thumbnail: "/img/icon-vr.png",
+    techStack: ["HTML", "CSS", "JavaScript"],
+    description: "Test",
+    features: [
+      "Test",
+      "Test",
+      "Test"
+    ],
+    challenges: [
+      "Test",
+      "Test",
+      "Test"
+    ],
+    screenshots: ["/img/icon-vr.png", "/img/icon-vr.png"],
+    urls: {
+      demo: "https://test.example.com",
+      github: "https://github.com/yuzukq/test"
     }
   }
 ];
