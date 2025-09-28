@@ -3,20 +3,20 @@
 import { Grid } from "@chakra-ui/react";
 import { useState } from "react";
 import ProductCard from "./ProductCard";
-import ProductDetailModal from "../modals/ProductDetailModal";
+import ProductDetailOverlay from "../overlays/ProductDetailOverlay";
 import { products, Product } from "@/data/products";
 
 export default function ProductsGrid() {
   const [selectedProduct, setSelectedProduct] = useState<Product | null>(null);
-  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [isOverlayOpen, setIsOverlayOpen] = useState(false);
 
   const handleProductClick = (product: Product) => {
     setSelectedProduct(product);
-    setIsModalOpen(true);
+    setIsOverlayOpen(true);
   };
 
-  const handleCloseModal = () => {
-    setIsModalOpen(false);
+  const handleCloseOverlay = () => {
+    setIsOverlayOpen(false);
     setSelectedProduct(null);
   };
 
@@ -43,10 +43,10 @@ export default function ProductsGrid() {
       </Grid>
       
       {selectedProduct && (
-        <ProductDetailModal
+        <ProductDetailOverlay
           product={selectedProduct}
-          isOpen={isModalOpen}
-          onClose={handleCloseModal}
+          isOpen={isOverlayOpen}
+          onClose={handleCloseOverlay}
         />
       )}
     </>
