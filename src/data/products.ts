@@ -105,45 +105,46 @@ export const products: Product[] = [
   {
     id: "Recolle",
     title: "Recolle",
-    thumbnail: "/img/icon-vr.png",
-    techStack: ["HTML", "CSS", "JavaScript"],
-    description: "Test",
+    thumbnail: "/img/Recolle/thumb_recolle_1.png",
+    techStack: ["Ruby on Rails","PostgreSQL", "Tailwind CSS","GPT-4o", "Daisy UI"],
+    description: "Recolle（リコレ） は，ユーザーの個性，写真と位置情報をもとに，自動で日記を生成してくれるウェブアプリケーションです． 画像をアップロードするだけで，撮影場所や写っている風景をもとに，AIが自然な文章を生成し，旅の記録や日常の思い出を手軽に残せます． Z世代の“思い出の整理”をもっと簡単に，もっと楽しく——そんな思いから生まれました．",
     features: [
-      "Test",
-      "Test",
-      "Test"
+      "生成AIによるブログの自動生成",
+      "視覚的に継続を促すインタフェース",
+      "画像の位置情報とペルソナに基づく推論",
+      "Webアプリケーションのため使用端末を問わないプラットフォームの提供"
     ],
     challenges: [
-      "Test",
-      "Test",
-      "Test"
+      "はじめてのハッカソンに参加",
+      "Dockerやgitを活用した安定的な共同開発を実現",
+      "オンプレ環境でデモ環境を構築",
+      "心理的安全性を意識した雰囲気づくり"
     ],
-    screenshots: ["/img/icon-vr.png", "/img/icon-vr.png"],
+    screenshots: ["/img/Recolle/prev_recolle_1.png", "/img/Recolle/prev_recolle_2.png","/img/Recolle/prev_recolle_3.png","/img/Recolle/prev_recolle_4.png","/img/Recolle/prev_recolle_5.png", "/img/Recolle/prev_recolle_6.png","/img/Recolle/prev_recolle_7.png","/img/Recolle/prev_recolle_8.png","/img/Recolle/prev_recolle_9.png", "/img/Recolle/prev_recolle_10.png","/img/Recolle/prev_recolle_11.png","/img/Recolle/prev_recolle_12.png"],
     urls: {
-      demo: "https://test.example.com",
-      github: "https://github.com/yuzukq/test"
+      demo: "https://www.youtube.com/watch?v=DMOSmGkLs44",
+      github: "https://student.redesigner.jp/portfolios/PF2e831921f7aa86dc5b77430183df1c1b"
     }
   },
   {
-    id: "hoge",
-    title: "hoge",
-    thumbnail: "/img/icon-vr.png",
-    techStack: ["HTML", "CSS", "JavaScript"],
-    description: "hoge",
+    id: "Unity",
+    title: "Unityを使った創作活動",
+    thumbnail: "/img/thumb_unity.png",
+    techStack: ["Unity", "C#", "Blender", "Photoshop"],
+    description: "VRChat上でのワールドギミックやモデルの制作，サークル活動での共同ゲーム開発においてUnityやBlenderを使用した開発を行っています．",
     features: [
-      "hoge",
-      "hoge",
-      "hoge"
+      "VRChat上でのワールドギミックやモデルの制作",
+      "Vketへの出展",
+      "BeatSaberで利用可能なカスタムモデルの制作",
+      "サークル活動での共同ゲーム開発"
     ],
     challenges: [
-      "hoge",
-      "hoge",
-      "hoge"
+      "趣味で行う創作活動では幅広く興味を持った技術領域へ挑戦しています．"
     ],
-    screenshots: ["/img/icon-vr.png", "/img/icon-vr.png"],
+    screenshots: ["/img/thumb_unity.png", "/img/prev_saber.png","/img/prev_don.png"],
     urls: {
-      demo: "https://test.example.com",
-      github: "https://github.com/yuzukq/test"
+      demo: "https://vrchat.com/home/launch?worldId=wrld_18bd5d2c-7dc3-40c2-8a70-0e3227b88575",
+      github: "https://github.com/yuzukq/Custom-Saber-MikuMikuSaber"
     }
   }
   
