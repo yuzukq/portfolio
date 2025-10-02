@@ -10,8 +10,8 @@ export const aboutMe: AboutMe = {
   description: `好きなキーボードは7sPro．技術を学ぶ学生です．
 CSを専攻していて最近はVR酔い（VIMS）について調べています．
 電子工作や身の回りのちょっとした不便を解消する開発が趣味です．
-最近はインターンなどでややWeb方面より․․․ 広く浅く興味を持ったものはいろいろやってます．
-（Unity‚ Blender‚ Arduino‚ Rails‚ Next‚ Unix）
+最近はインターンなどでややWeb方面より... 広く浅く興味を持ったものはいろいろやってます．
+（Unity, Blender, Arduino, Rails, Next, Unix）
 
 すべてのVRコンテンツとそれに付随する技術が好きです
 たまにうどんをこねてます`,
