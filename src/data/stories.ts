@@ -9,21 +9,33 @@ export interface Story {
 
 export const stories: Story[] = [
   {
-    id: "birth",
-    date: "2004年10月",
-    title: "オレ，誕生",
-    description: "それで俺が生まれたってわけ",
+    id: "dmyan1",
+    date: "2020年10月",
+    title: "テストタイトル",
+    description: "テスト説明",
   },
   {
-    id: "kindergarten-graduation",
-    date: "2023年3月",
-    title: "幼稚園を卒園",
-    description: "19年間の幼稚園生活に終わりを告げる",
+    id: "dammy2",
+    date: "長い長い長い長い日付",
+    title: "長い長い長い長い長い長いタイトル",
+    description: "長い長い長い長い長い長い長い説明",
   },
   {
-    id: "mountain-entry",
-    date: "2023年4月",
-    title: "隣町の裏山に入山",
-    description: "自分探しのために山に入る．",
+    id: "dammy3",
+    date: "長い長い長い長い長い長い長い長い長い長い長い日付",
+    title: "長い長い長い長い長い長い長い長い長い長い長いタイトル",
+    description: "長い長い長い長い長い長い長い長い長い長い長い長い長い長い長い長い長い長い長い長い長い長い長い長い長い長い長い長い長い長い長い長い長い長い長い長い説明",
   },
+  {
+    id: "dammy4",
+    date: "ダミー日付",
+    title: "ダミータイトル",
+    description: "ダミー説明",
+  },
+  {
+    id: "dammy5",
+    date: "ダミー日付",
+    title: "ダミータイトル",
+    description: "ダミー説明",
+  }
 ];
