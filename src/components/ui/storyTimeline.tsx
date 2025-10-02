@@ -6,7 +6,7 @@ export default function StoryTimeline() {
     <Timeline.Root size="xl" variant="outline">
       {stories.map((story, index) => {
         const isEven = index % 2 === 0;
-        const delay = index * 0.2;
+        const delay = index * 0.4;
 
         return (
           <Timeline.Item key={story.id}>
