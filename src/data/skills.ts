@@ -1,0 +1,60 @@
+// スキルのデータを記述するファイル
+
+export interface SkillData {
+  [key: string]: number;
+}
+
+export interface SkillCategory {
+  id: string;
+  title: string;
+  color: string;
+  data: SkillData;
+}
+
+export const skillCategories: SkillCategory[] = [
+  {
+    id: "backend",
+    title: "BackEnd",
+    color: "blue.solid",
+    data: {
+      "Ruby on Rails": 2,
+      "PostgreSQL": 1,
+      "GraphQL": 2,
+      "Nginx": 1,
+      "CloudFlare": 1,
+    },
+  },
+  {
+    id: "frontend",
+    title: "FrontEnd",
+    color: "green.solid",
+    data: {
+      "JS/TS": 3,
+      "React": 2,
+      "Next.js": 2,
+      "HTML/CSS": 3,
+      "Tailwind CSS": 1,
+    },
+  },
+  {
+    id: "devops",
+    title: "DevOps",
+    color: "purple.solid",
+    data: {
+      "Docker": 3,
+      "UNIX": 3,
+      "Git/Github": 4,
+      "Unity": 3,
+      "Arduino": 3,
+      "Processing": 1,
+    },
+  },
+];
+
+export const skillLevels = [
+  { level: 1, description: "授業や個人で軽く使用した程度" },
+  { level: 2, description: "インターン等で使用したことがあるがもう少し習熟が必要" },
+  { level: 3, description: "個人でも長期的に使用している" },
+  { level: 4, description: "実務レベルで自由に駆使できる" },
+  { level: 5, description: "チョットデキル" },
+];
