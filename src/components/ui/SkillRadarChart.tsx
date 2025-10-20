@@ -1,7 +1,7 @@
 "use client"
 
 import { Chart, useChart } from "@chakra-ui/charts"
-import { PolarAngleAxis, PolarGrid, Radar, RadarChart as RechartsRadarChart } from "recharts"
+import { PolarAngleAxis, PolarGrid, PolarRadiusAxis, Radar, RadarChart as RechartsRadarChart } from "recharts"
 import { Box, Heading } from "@chakra-ui/react"
 import type { SkillCategory } from "@/data/skills"
 
@@ -29,6 +29,11 @@ export default function SkillRadarChart({ category }: SkillRadarChartProps) {
       <Chart.Root maxW="sm" chart={chart} mx="auto">
         <RechartsRadarChart data={chart.data}>
           <PolarGrid stroke={chart.color("border")} />
+          <PolarRadiusAxis 
+            angle={90} 
+            domain={[0, 5]} 
+            tick={{ fill: chart.color("fg"), fontSize: 10 }}
+          />
           <PolarAngleAxis 
             dataKey={chart.key("skill")} 
             tickLine={false}
@@ -40,7 +45,7 @@ export default function SkillRadarChart({ category }: SkillRadarChartProps) {
               isAnimationActive={true}
               key={item.name}
               name={item.name}
-              label={{ fill: chart.color("fg") }}
+              //label={{ fill: chart.color("fg") }}
               dataKey={chart.key(item.name)}
               stroke={chart.color(item.color)}
               fill={chart.color(item.color)}
