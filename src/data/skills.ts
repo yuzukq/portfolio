@@ -11,6 +11,11 @@ export interface SkillCategory {
   data: SkillData;
 }
 
+export interface Certification {
+  name: string;
+  year: string;
+}
+
 export const skillCategories: SkillCategory[] = [
   {
     id: "backend",
@@ -57,4 +62,8 @@ export const skillLevels = [
   { level: 3, description: "個人でも長期的に使用している" },
   { level: 4, description: "実務レベルで自由に駆使できる" },
   { level: 5, description: "チョットデキル" },
+];
+
+export const certifications: Certification[] = [
+  { name: "基本情報技術者", year: "2025年2月" },
 ];
