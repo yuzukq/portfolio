@@ -1,5 +1,5 @@
 import { SectionContainer } from "@/components/layouts/SectionContainer";
-import { Heading, Flex, Box, Image, Text } from "@chakra-ui/react";
+import { Heading, Flex, Box, Image, Text, Button, Link } from "@chakra-ui/react";
 import { aboutMe } from "@/data/aboutme";
 
 export default function AboutSection() {
@@ -44,6 +44,14 @@ export default function AboutSection() {
             </Text>
           </Box>
         </Flex>
+
+        <Box mt={8}>
+          <Link href="/blog">
+            <Button colorPalette="gray" variant="subtle" size="lg">
+              ブログを読む
+            </Button>
+          </Link>
+        </Box>
       </Flex>
     </SectionContainer>
   );

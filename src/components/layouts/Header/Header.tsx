@@ -2,8 +2,6 @@
 
 import { 
   Box, 
-  HStack,
-  Link, 
   useBreakpointValue
 } from "@chakra-ui/react"
 import HeaderDesktop from "./HeaderDesktop"
@@ -20,7 +18,8 @@ export default function Header() {
     { href: "#products", label: "Products" },
     { href: "#skills", label: "Skills" },
     { href: "#studies", label: "Studies" },
-    { href: "#story", label: "Story" }
+    { href: "#story", label: "Story" },
+    { href: "/blog", label: "Blog" }
   ]
 
   return (

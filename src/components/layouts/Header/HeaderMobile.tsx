@@ -1,4 +1,4 @@
-import { Box, VStack, Link, Drawer, Button } from "@chakra-ui/react"
+import { VStack, Link, Drawer, Button } from "@chakra-ui/react"
 import { FiMenu, FiX } from "react-icons/fi"
 
 export default function HeaderMobile({ items }: { items: { href: string; label: string; }[] }) {
