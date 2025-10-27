@@ -6,8 +6,6 @@ import rehypeRaw from 'rehype-raw'
 import rehypeSlug from 'rehype-slug'
 import rehypeAutolinkHeadings from 'rehype-autolink-headings'
 import Image from 'next/image'
-import Footer from '@/components/layouts/Footer'
-import BlogHeader from '@/components/blog/BlogHeader'
 import ShareRow from './ShareRow'
 
 export const dynamic = 'error' // SSG
@@ -40,9 +38,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
   }
 
   return (
-  <>
-  <BlogHeader />
-  <Box maxW="900px" mx="auto" px={{ base: 4, md: 8 }} py={{ base: 10, md: 16 }}>
+    <Box maxW="900px" mx="auto" px={{ base: 4, md: 8 }} py={{ base: 10, md: 16 }}>
       <Heading size="2xl" mb={4}>{post.title}</Heading>
       <HStack gap={3} color="gray.400" mb={6} flexWrap="wrap">
         <Text>{new Date(post.date).toLocaleDateString('ja-JP')}</Text>
@@ -92,9 +88,5 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
       {/* 一覧へ戻る + 共有ボタン行 */}
       <ShareRow title={post.title} />
     </Box>
-    
-    {/* 共通フッター */}
-    <Footer />
-    </>
   )
 }
