@@ -10,7 +10,8 @@ export default function Footer() {
       bg="gray.800"
       textAlign="center"
     >
-      <Text mb={2}>© 2025 Yuzuki Tsuchiya</Text>
+      {/* <Text mb={2}>© 2025 Yuzuki Tsuchiya</Text> */}
+      <Text mb={2}>© 2025 Yuzu</Text>
       <HStack justify="center" gap={4}>
         <Link href="mailto:c1.101@gmail.com">Contact</Link>
         <Link href="https://github.com/yuzukq">GitHub</Link>
