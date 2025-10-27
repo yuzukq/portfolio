@@ -3,6 +3,7 @@
 import { HStack, Button, Link, IconButton } from "@chakra-ui/react"
 import { FaTwitter, FaLink } from "react-icons/fa"
 import { usePathname } from "next/navigation"
+import { toaster } from "../../../components/ui/toaster"
 
 export default function ShareRow({ title }: { title: string }) {
   const pathname = usePathname()
@@ -19,10 +20,20 @@ export default function ShareRow({ title }: { title: string }) {
   }
 
   const handleCopyLink = async () => {
+    const text = getShareUrl()
     try {
-      await navigator.clipboard.writeText(getShareUrl())
-    } catch {
-      // no-op
+      if (!navigator?.clipboard?.writeText) throw new Error("Clipboard API unsupported")
+      await navigator.clipboard.writeText(text)
+      toaster.create({
+        title: "リンクをコピーしました",
+        type: "success",
+      })
+    } catch (e) {
+      toaster.create({
+        title: "コピーに失敗しました",
+        description: "お手数ですが手動でコピーしてください",
+        type: "error",
+      })
     }
   }
 
