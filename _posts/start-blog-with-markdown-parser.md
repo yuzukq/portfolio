@@ -1,5 +1,5 @@
 ---
-slug: hello-world
+slug: start-blog-with-markdown-parser
 title: マークダウンパーサーを使ったブログの運用
 date: 2025-10-27
 description: Next.js と Chakra UI で Markdown ベースのブログ機能を実装しました。仕組みと設計のこだわりを紹介します。
@@ -12,12 +12,13 @@ thumbnail: /images/blog/20251027/hello_icatch.png
 
 この記事は、Markdown ファイルを Git で管理し、Vercel のビルドで自動公開されるブログ機能の第一弾です。
 
-## なぜ Git ベース？
-
-- mdで気軽にコンテンツの追加が可能
+## QiitaやZennを使わないの？ なぜ Git ベース？ 
+- 技術領域以外の話も扱いたかった
+- せっかく独自ドメインを取得したのでコンテンツを生やしたくなったため
+- htmlを書かずにmdで気軽に管理したかった
 - 差分レビュー,管理がしやすい
 - 依存が少ない（BaaSや外部 CMS 不要）
-![カバー画像](/images/blog/20251027/prev_edit.png)
+![管理画面](/images/blog/20251027/prev_edit.png)
 
 ## 実装のポイント
 
