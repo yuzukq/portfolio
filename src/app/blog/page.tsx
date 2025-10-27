@@ -1,6 +1,7 @@
 import { getAllPostsMeta } from '@/lib/posts'
 import { Box, Heading, SimpleGrid, Image as ChakraImage, Text, HStack, VStack, Card, Tag } from '@chakra-ui/react'
 import Footer from '@/components/layouts/Footer'
+import BlogHeader from '@/components/blog/BlogHeader'
 import NextImage from 'next/image'
 import NextLink from 'next/link'
 
@@ -11,6 +12,7 @@ export default function BlogIndexPage() {
 
   return (
     <>
+      <BlogHeader />
       <Box maxW="1200px" mx="auto" px={{ base: 4, md: 8 }} py={{ base: 10, md: 16 }}>
         <Heading size="2xl" mb={8}>Blog</Heading>
         <SimpleGrid columns={{ base: 1, sm: 2, lg: 3 }} gap={8}>
