@@ -10,7 +10,7 @@ export default function ProductSection() {
           Products
         </Heading>
         <Text color="gray.300" mb={10} textAlign="center" maxW="600px">
-          これまでに開発したプロダクトをご紹介します。各カードをクリックすると詳細情報をご確認いただけます。
+          これまでに開発したプロダクトをご紹介します．各カードをクリックすると詳細情報をご確認いただけます．
         </Text>
         <ProductsGrid />
       </Flex>

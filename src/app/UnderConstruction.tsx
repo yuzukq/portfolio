@@ -58,7 +58,7 @@ export default function UnderConstruction() {
                   lineHeight="tall"
                   fontWeight="400"
                 >
-                  誠意制作中です。しばらくお待ちください。
+                  誠意制作中です．しばらくお待ちください．
                 </Text>
 
                 {/* ソーシャルリンクボタン */}

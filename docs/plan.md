@@ -15,7 +15,7 @@
 src/
 ├── app/
 │   ├── layout.tsx         # 全ページ共通のレイアウト（Providerのラップ）
-│   ├── page.tsx           # メインページ。MainLayoutを呼び出すだけ
+│   ├── page.tsx           # メインページ．MainLayoutを呼び出すだけ
 |   └── UnderConstruction.tsx       # 開発中であることを示す画面．完成までの間pageでよぶ
 │   
 │

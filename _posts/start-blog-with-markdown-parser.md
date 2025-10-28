@@ -2,7 +2,7 @@
 slug: start-blog-with-markdown-parser
 title: マークダウンパーサーを使ったブログの運用
 date: 2025-10-27
-description: Next.js と Chakra UI で Markdown ベースのブログ機能を実装しました。仕組みと設計のこだわりを紹介します。
+description: Next.js と Chakra UI で Markdown ベースのブログ機能を実装しました．仕組みと設計のこだわりを紹介します．
 tags:
   - Next.js
   - マークダウンパーサー
@@ -10,7 +10,7 @@ tags:
 thumbnail: /images/blog/20251027/hello_icatch.png
 ---
 
-この記事は、Markdown ファイルを Git で管理し、Vercel のビルドで自動公開されるブログ機能の第一弾です。
+この記事は，Markdown ファイルを Git で管理し，Vercel のビルドで自動公開されるブログ機能の第一弾です．
 
 ## QiitaやZennを使わないの？ なぜ Git ベース？ 
 - 技術領域以外の話も扱いたかった
@@ -47,4 +47,4 @@ export type PostMeta = {
 }
 ```
 
-今後はタグ絞り込みや関連投稿など、少しずつ拡張していきます。
+今後はタグ絞り込みや関連投稿など，少しずつ拡張していきます．

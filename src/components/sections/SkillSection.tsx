@@ -13,7 +13,7 @@ export default function SkillSection() {
           Skills
         </Heading>
         <Text color="gray.300" mb={10} textAlign="center" maxW="600px">
-          これまでに習得したスキルや技術スタックを可視化しています。
+          これまでに習得したスキルや技術スタックを可視化しています．
         </Text>
         
         <SimpleGrid columns={{ base: 1, md: 2, lg: 3 }} gap={8} w="full" mb={12}>
