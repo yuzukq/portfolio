@@ -65,6 +65,9 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
         '& ul': { listStyleType: 'disc', paddingInlineStart: '1.5rem', marginBottom: '1rem' },
         '& ol': { listStyleType: 'decimal', paddingInlineStart: '1.5rem', marginBottom: '1rem' },
         '& li': { marginBottom: '0.25rem' },
+        // Links
+        '& a': { color: '#3b82f6', textDecoration: 'underline', transition: 'color 0.2s ease' },
+        '& a:hover': { color: '#2563eb' },
         // Code blocks
         '& pre': { marginBottom: '1.5rem', backgroundColor: '#1a202c', padding: '1rem', borderRadius: '8px', overflowX: 'auto' },
         '& code': { backgroundColor: 'rgba(0,0,0,0.3)', padding: '0.15rem 0.35rem', borderRadius: '4px' },
