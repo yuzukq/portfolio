@@ -7,6 +7,7 @@ import rehypeSlug from 'rehype-slug'
 import rehypeAutolinkHeadings from 'rehype-autolink-headings'
 import Image from 'next/image'
 import ShareRow from './ShareRow'
+import remarkLatexBreaks from '@/lib/remark-latex-breaks'
 
 export const dynamic = 'error' // SSG
 
@@ -71,7 +72,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
         '& img': { borderRadius: 8, margin: '1rem 0' },
       }}>
         <ReactMarkdown
-          remarkPlugins={[remarkGfm]}
+          remarkPlugins={[remarkGfm, remarkLatexBreaks]}
           rehypePlugins={[rehypeRaw, rehypeSlug, [rehypeAutolinkHeadings, { behavior: 'wrap' }]]}
           components={{
             img: ({ src, alt }) => {
