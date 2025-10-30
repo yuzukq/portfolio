@@ -65,9 +65,13 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
         '& ul': { listStyleType: 'disc', paddingInlineStart: '1.5rem', marginBottom: '1rem' },
         '& ol': { listStyleType: 'decimal', paddingInlineStart: '1.5rem', marginBottom: '1rem' },
         '& li': { marginBottom: '0.25rem' },
-        // Links
-        '& a': { color: '#3b82f6', textDecoration: 'underline', transition: 'color 0.2s ease' },
-        '& a:hover': { color: '#2563eb' },
+  // Links (default: highlighted)
+  '& a': { color: '#3b82f6', textDecoration: 'underline', transition: 'color 0.2s ease' },
+  '& a:hover': { color: '#2563eb' },
+  // Ensure links that are inside headings (e.g. rehype-autolink-headings with behavior: 'wrap')
+  // keep the heading's text color instead of the link highlight.
+  '& h1 > a, & h2 > a, & h3 > a, & h4 > a': { color: 'inherit', textDecoration: 'none' },
+  '& h1 > a:hover, & h2 > a:hover, & h3 > a:hover, & h4 > a:hover': { color: 'inherit' },
         // Code blocks
         '& pre': { marginBottom: '1.5rem', backgroundColor: '#1a202c', padding: '1rem', borderRadius: '8px', overflowX: 'auto' },
         '& code': { backgroundColor: 'rgba(0,0,0,0.3)', padding: '0.15rem 0.35rem', borderRadius: '4px' },
