@@ -16,7 +16,7 @@ thumbnail: /images/blog/20251029/thumb.png
 ### 経緯
 　Unixの各種DEやi3/HyprlandなどのWMを触る中で，見た目を作り込む「[Rice](https://www.reddit.com/r/linuxquestions/comments/mb9q1r/what_is_ricing_in_linux/?tl=ja&utm_source=share&utm_medium=web3x&utm_name=web3xcss&utm_term=1&utm_content=share_button)」に惹かれました．軽量で美しいタイリングとキーボード中心の操作性に魅力を感じ，ラップトップをネイティブArchで常用することを検討していました．
 
-#### 事件(研究室配属)
+### 事件(研究室配属)
 しかし私が配属された研究室ではPowerPoint投影や配布Wordテンプレの厳守が必須．結果としてWindowsをメインに据えつつ，Linuxライクなタイリング環境を求めることに．そこで辿り着いたのが「GlazeWM」と「Yasb Reborn」です．
 
 # 環境構築
@@ -26,7 +26,7 @@ thumbnail: /images/blog/20251029/thumb.png
  [GlazeWM](https://github.com/glzr-io/glazewm)は[i3](https://wiki.archlinux.jp/index.php/I3)から着想を得て作られたオープンソースのWindows用タイリングウィンドウマネージャです．キーボード操作によるコマンドでウィンドウを簡単に整理し，そのレイアウトをリアルタイムで調整することが出来ます．\\
 他にもWindowsで利用可能なタイリングウィンドウマネージャとしてはHyprlandライクな[komorebi](https://github.com/LGUG2Z/komorebi)などがありますが，設定のわかりやすさとLinux経験者からの声でより安定性が高く評価されたGlazeWMを使用しています．
 
-#### 導入
+### 導入
 　GlazeWMのインストールはwingetでの取得と，githubからダウンロードしたインストーラーを使用する二種類の方法で導入可能です．\\
 wingetを利用する場合はpowershellを起動し，
 
@@ -39,7 +39,7 @@ winget install glazewm
 チェックを外して「install」をクリックして正常に実行されれば導入は完了です！
 ![インストール](/images/blog/20251029/installer_check.png)
 
-#### コンフィグファイルの変更
+### コンフィグファイルの変更
 　コンフィグファイルの変更必須箇所と，主要パラメータを抜粋してご紹介します．また，これから行う変更を加えた私が使用しているコンフィグファイルは[こちら](https://github.com/yuzukq/dotfiles/blob/main/laptop-windows/.glzr/glazewm/config.yaml)から閲覧可能です．よろしければご活用ください．
 GlazeWMの導入が完了したら~(ユーザーのホームディレクトリ)直下に`.glzr`が生成されます． スタートメニューからGlazeWMを起動してください．実行後，タスクバー右側のタスクトレイにGlazeWMが表示されます．これを押下することでコンフィグファイルへアクセスが出来ます(直接`C:\Users\[yourName]\.glzr\glazewm`を開いてもかまいません)．またこの時，wingetでインストールしてる場合は`.glzr`に`zebar`のコンフィグディレクトリが一緒に生成されている場合がありますが使用しないため削除してしまっても問題ありません．
 ![タスクトレイ](/images/blog/20251029/glaze_tray.png)
@@ -189,3 +189,30 @@ keybindings:
 ## タブバー：Yasb Reborn
 ![yasbgit](/images/blog/20251029/yasb_git.png)
 　[Yasb](https://github.com/amnweb/yasb)はPython(psutil)で作成されたタブバーを追加するOSSです．Windows APIをラップすることで，CPUやRam使用率といったコンピュータ本体の情報をリアルタイムに表示できるだけでなく，有志によって作成された外部アプリケーションと連携したウィジェットが50種類以上用意されているのが特徴となっています．また，スタイリングに関しても，コミュニティで作成されたテーマを簡単に利用することや，CSSを自身で記述して独自のスタイルを適用することも可能です．このため，ユーザーが作成したデザインを共有しあったり，dotfileについて議論が生まれる点が魅力の一つでもあります．
+
+
+### 導入
+　YasbはGlazeWMと同様，のインストールはwingetレジストリからの取得と，githubからダウンロードしたインストーラーを使用する二種類の方法で導入可能です．ここでは後者の方法を紹介します．\\
+(wingetを利用する場合はターミナルで下記を実行)
+```bash
+winget install --id AmN.yasb
+```
+**注意点!!!**\\
+yasbで使用されているテーマやウィジェットの多くは「[Nord fonts](https://www.nerdfonts.com/font-downloads)」が使用されています．事前に[Nord font Jetbrain Mono(推奨)](https://github.com/ryanoasis/nerd-fonts/releases/latest/download/JetBrainsMono.zip)をダウンロードし，windowsにフォント導入を行ってくさい．\\
+(フォントの設定はスタートメニューからフォントと検索し，「フォント設定-システム設定」を開きます．先ほどダウンロードしたフォントを解凍し，ドラッグ＆ドロップで導入可能です．)\\
+
+yasbをインストールします．[リリースページ](https://github.com/amnweb/yasb/releases)にアクセスし，最新のインストーラを取得します．
+![yasbインストーラの取得](/images/blog/20251029/installer_download_yasb.png)
+その後，インストーラを実行し，指示に沿って導入を進めます．
+![yasbのインストール](/images/blog/20251029/installer_check_yasb.png)
+インストールが完了し，スタートメニューからyasbを実行すると，デスクトップ上部にタブバーが表示されます...!!
+
+### テーマの変更
+次に配布されているテーマの利用方法を紹介します．GlazeWM同様，デスクトップ右下のタスクトレイからアイコンを右クリックすると各種メニューにアクセスできます．
+![yasbタスクトレイ](/images/blog/20251029/yasb_tray.png)
+「Get Themes」をクリックするとユーザーが作成したテーマを簡単にインストールすることが出来ます．また，テーマ一覧は[こちら](https://github.com/amnweb/yasb-themes)からも閲覧可能です．ここでは後述するconfig.yamlやstyle.cssを独自にカスタマイズしたものが公開されており，コミット履歴からもわかる通り，かなりの頻度でテーマが公開されています．
+![テーマのプレビュー](/images/blog/20251029/theme_prev.png)
+テーマ選択ウィンドウから，任意のテーマのinstallボタンを押下して，yasbをリロードすることで，テーマを利用できます．お好きなテーマをお選び下さい．
+### コンフィグ：ウィジェットのカスタマイズ
+
+### 独自テーマの作成
