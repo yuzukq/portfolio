@@ -79,6 +79,6 @@ export const stories: Story[] = [
     id: "lab",
     date: "2025年10月",
     title: "研究室配属",
-    description: `無事第一志望の研究室に配属される．現在は論文輪講でVR酔い(VIMS,cyber sickness)について専攻先行研究を調査しています．`,
+    description: `無事第一志望の研究室に配属される．現在は専攻研究について調査を行う段階で，Redirected walking, cyber sickness, Cross-modalなど，これまで趣味でしかなかったVRについて学術的に行われている研究事例について学んでいます．また，2025年11月現在はVRに対する学術的な知見を深めるため，個人的にVR技術者認定試験に向けた講習会の参加，学習に励んでいます．`,
   },
 ];
