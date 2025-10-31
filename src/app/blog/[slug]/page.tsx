@@ -5,6 +5,7 @@ import remarkGfm from 'remark-gfm'
 import rehypeRaw from 'rehype-raw'
 import rehypeSlug from 'rehype-slug'
 import rehypeAutolinkHeadings from 'rehype-autolink-headings'
+import rehypePrismPlus from 'rehype-prism-plus'
 import Image from 'next/image'
 import ShareRow from './ShareRow'
 import remarkLatexBreaks from '@/lib/remark-latex-breaks'
@@ -80,7 +81,13 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
       }}>
         <ReactMarkdown
           remarkPlugins={[remarkGfm, remarkLatexBreaks]}
-          rehypePlugins={[rehypeRaw, rehypeSlug, [rehypeAutolinkHeadings, { behavior: 'wrap' }]]}
+          rehypePlugins={[
+            rehypeRaw,
+            rehypeSlug,
+            [rehypeAutolinkHeadings, { behavior: 'wrap' }],
+            // Syntax highlighting for code blocks
+            rehypePrismPlus,
+          ]}
           components={{
             img: ({ src, alt }) => {
               if (!src || typeof src !== 'string') return null

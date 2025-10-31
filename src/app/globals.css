@@ -1,0 +1,13 @@
+/* Global styles for the app, including Prism theme for code highlighting */
+@import 'prism-themes/themes/prism-vsc-dark-plus.css';
+
+/* Optional tweaks to ensure code blocks look good with Chakra UI styling */
+pre[class*="language-"] {
+  border-radius: 8px;
+  padding: 1rem;
+  overflow: auto;
+}
+
+code[class*="language-"] {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+}
