@@ -54,7 +54,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
         </Box>
       )}
   <Separator my={8} />
-      <Box className="markdown-body" css={{
+  <Box className="markdown-body" css={{
         // Headings
         '& h1': { fontSize: '2rem', fontWeight: 800, marginTop: '2.5rem', marginBottom: '1rem' },
         '& h2': { fontSize: '1.75rem', fontWeight: 700, marginTop: '2rem', marginBottom: '0.75rem' },
@@ -73,9 +73,12 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
   // keep the heading's text color instead of the link highlight.
   '& h1 > a, & h2 > a, & h3 > a, & h4 > a': { color: 'inherit', textDecoration: 'none' },
   '& h1 > a:hover, & h2 > a:hover, & h3 > a:hover, & h4 > a:hover': { color: 'inherit' },
-        // Code blocks
-        '& pre': { marginBottom: '1.5rem', backgroundColor: '#1a202c', padding: '1rem', borderRadius: '8px', overflowX: 'auto' },
-        '& code': { backgroundColor: 'rgba(0,0,0,0.3)', padding: '0.15rem 0.35rem', borderRadius: '4px' },
+  // Code blocks
+  '& pre': { marginBottom: '1.5rem', backgroundColor: '#1a202c', padding: '1rem', borderRadius: '8px', overflowX: 'auto' },
+  // インラインコードのみ背景色を適用（コードブロック内の <code> には適用しない）
+  '& :not(pre) > code': { backgroundColor: 'rgba(0,0,0,0.3)', padding: '0.15rem 0.35rem', borderRadius: '4px' },
+  // Prismテーマと競合しないよう、コードブロック内の <code> は背景透明にする
+  '& pre code': { backgroundColor: 'transparent', padding: 0, borderRadius: 0 },
         // Images
         '& img': { borderRadius: 8, margin: '1rem 0' },
       }}>
