@@ -4,7 +4,7 @@ import { Provider } from "@/components/ui/provider";
 
 export const metadata: Metadata = {
   title: "Yuzu portfolio",
-  description: "portfolio",
+  description: "Yuzu のポートフォリオサイト。制作物、技術ブログ、スキル・経歴を公開しています。",
 };
 
 export default function RootLayout({
