@@ -60,10 +60,11 @@ export const skillLevels = [
   { level: 1, description: "授業や個人で軽く使用した程度" },
   { level: 2, description: "インターン等で使用したことがあるがもう少し習熟が必要" },
   { level: 3, description: "個人でも長期的に使用している" },
-  { level: 4, description: "実務レベルで自由に駆使できる" },
+  { level: 4, description: "実務レベルで利用できる" },
   { level: 5, description: "チョットデキル" },
 ];
 
 export const certifications: Certification[] = [
   { name: "基本情報技術者", year: "2025年2月" },
+  { name: "VR技術者認定試験", year: "受験予定" },
 ];

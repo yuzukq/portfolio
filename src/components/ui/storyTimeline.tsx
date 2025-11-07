@@ -43,7 +43,7 @@ export default function StoryTimeline() {
                     <Card.Root maxW="sm" overflow="hidden">
                       <Card.Body>
                         <Card.Title>{story.title}</Card.Title>
-                        <Card.Description>{story.description}</Card.Description>
+                        <Card.Description whiteSpace="pre-line">{story.description}</Card.Description>
                       </Card.Body>
                     </Card.Root>
                   </Box>

@@ -6,11 +6,11 @@ export interface AboutMe {
 }
 
 export const aboutMe: AboutMe = {
-  icon: "/img/icon-vr.png",
+  icon: "/images/global/icon-vr.png",
   description: `好きなキーボードは7sPro．技術を学ぶ学生です．
-CSを専攻していて最近はVR酔い（VIMS）について調べています．
+CSを専攻していて研究室ではVR(cyber sicknessやRedirected walking)について調べています．
 電子工作や身の回りのちょっとした不便を解消する開発が趣味です．
-最近はインターンなどでややWeb方面より... 広く浅く興味を持ったものはいろいろやってます．
+最近はややWeb方面より... 広く浅く,興味を持ったものはとことん深く．いろいろやってます．
 （Unity, Blender, Arduino, Rails, Next, Unix）
 
 すべてのVRコンテンツとそれに付随する技術が好きです

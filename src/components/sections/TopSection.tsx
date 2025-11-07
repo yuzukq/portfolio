@@ -19,10 +19,10 @@ export default function TopSection() {
             opacity={0}
             animation="fade-in 1.0s ease-in-out 1.0s forwards"
           >
-            <Text>Student engineer Yuzu</Text>
+            <Text>Computer Science Student Yuzu</Text>
           </Box>
           <Image
-            src="/img/icon-vr.png"
+            src="/images/global/icon-vr.png"
             alt="icon-vr"
             borderRadius="full"
             fit="cover"
