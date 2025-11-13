@@ -3,6 +3,7 @@ name: CI
 on:
   push:
     branches:
+      - main
       - develop
       - ci/**
       - feature/**
@@ -47,8 +48,6 @@ jobs:
         run: npm run build
 
       # Markdown のリンクチェック（_posts 等の外部/内部リンク）
-      # lychee ヘッダー指定は key=value 形式が必要 ("User-Agent=...")
-      # Reddit は除外し、ネットワーク一時障害対策の軽いリトライを追加
       - name: Link check (Markdown)
         uses: lycheeverse/lychee-action@v1
         with:
