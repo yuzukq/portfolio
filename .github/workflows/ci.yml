@@ -47,6 +47,8 @@ jobs:
         run: npm run build
 
       # Markdown のリンクチェック（_posts 等の外部/内部リンク）
+      # lychee ヘッダー指定は key=value 形式が必要 ("User-Agent=...")
+      # Reddit は除外し、ネットワーク一時障害対策の軽いリトライを追加
       - name: Link check (Markdown)
         uses: lycheeverse/lychee-action@v1
         with:
@@ -54,8 +56,10 @@ jobs:
             --verbose
             --no-progress
             --exclude-path node_modules
-            --header "User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0 Safari/537.36"
+            --header "User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0 Safari/537.36"
             --exclude reddit.com
+            --retry-wait-time 2
+            --max-retries 2
             "**/*.md"
           fail: true
         env:
