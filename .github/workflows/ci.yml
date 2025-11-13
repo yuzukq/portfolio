@@ -47,6 +47,7 @@ jobs:
         run: npm run build
 
       # Markdown のリンクチェック（_posts 等の外部/内部リンク）
+        # Reddit は Bot ブロックで 403 を返しやすいので除外
       - name: Link check (Markdown)
         uses: lycheeverse/lychee-action@v1
         with:
@@ -54,6 +55,7 @@ jobs:
             --verbose
             --no-progress
             --exclude-path node_modules
+            --exclude 'https?://(www\\.)?reddit\\.com/.*'
             "**/*.md"
           fail: true
         env:
