@@ -1,7 +1,7 @@
 import { test, expect } from '@playwright/test';
 
 test('存在しないページで404が表示される', async ({ page }) => {
-  await page.goto('http://localhost:3000/__no_such_page__');
+  await page.goto('/__no_such_page__');
   //  
   // ページタイトルに404が含まれることを確認
   //await expect(page).toHaveTitle(/404:This page could not be found/);

@@ -1,7 +1,7 @@
 import { test, expect } from '@playwright/test';
 
 test('プロダクトカードをクリックするとオーバーレイが表示される', async ({ page }) => {
-  await page.goto('http://localhost:3000');
+  await page.goto('/');
   
   // Portfolio Websiteのカードをクリック
   const productCard = page.getByRole('heading', { name: 'Portfolio Website' }).locator('..');
@@ -14,7 +14,7 @@ test('プロダクトカードをクリックするとオーバーレイが表�
 });
 
 test('オーバーレイを閉じるボタンで閉じられる', async ({ page }) => {
-  await page.goto('http://localhost:3000');
+  await page.goto('/');
   
   // プロダクトカードをクリックしてオーバーレイを開く
   const productCard = page.getByRole('heading', { name: 'Better Portal Extension' }).locator('..');
@@ -32,7 +32,7 @@ test('オーバーレイを閉じるボタンで閉じられる', async ({ page 
 });
 
 test('Escapeキーでオーバーレイを閉じられる', async ({ page }) => {
-  await page.goto('http://localhost:3000');
+  await page.goto('/');
   
   // プロダクトカードをクリックしてオーバーレイを開く
   const productCard = page.getByRole('heading', { name: 'Recolle' }).locator('..');
@@ -50,7 +50,7 @@ test('Escapeキーでオーバーレイを閉じられる', async ({ page }) => 
 });
 
 test('オーバーレイの外側をクリックして閉じられる', async ({ page }) => {
-  await page.goto('http://localhost:3000');
+  await page.goto('/');
   
   // プロダクトカードをクリックしてオーバーレイを開く
   const productCard = page.getByRole('heading', { name: 'AttendanceReminder-forCIT' }).locator('..');

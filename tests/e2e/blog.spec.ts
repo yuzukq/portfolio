@@ -1,7 +1,7 @@
 import { test, expect } from '@playwright/test';
 
 test('ブログ一覧ページが正しく表示される', async ({ page }) => {
-  await page.goto('http://localhost:3000/blog');
+  await page.goto('/blog');
   
   // ページタイトルの確認
   await expect(page).toHaveTitle('Yuzu portfolio');
@@ -16,7 +16,7 @@ test('ブログ一覧ページが正しく表示される', async ({ page }) => 
 });
 
 test('ブログ一覧から詳細ページへ遷移できる', async ({ page }) => {
-  await page.goto('http://localhost:3000/blog');
+  await page.goto('/blog');
 
   // 最初のブログ記事リンクを取得
   const firstBlogLink = page.locator('a[href^="/blog/"]').first();
@@ -26,7 +26,7 @@ test('ブログ一覧から詳細ページへ遷移できる', async ({ page }) 
   await firstBlogLink.click();
   
   // 詳細ページに遷移したことを確認
-  await expect(page).toHaveURL(`http://localhost:3000${href}`);
+  await expect(page).toHaveURL(href!);
   
   // 記事のタイトル（h2）が表示されることを確認
   await expect(page.locator('h2').first()).toBeVisible();
@@ -34,7 +34,7 @@ test('ブログ一覧から詳細ページへ遷移できる', async ({ page }) 
 
 test('ブログ詳細ページから一覧に戻れる', async ({ page }) => {
   // 既知のブログ記事ページに直接アクセス
-  await page.goto('http://localhost:3000/blog/vr-seminar');
+  await page.goto('/blog/vr-seminar');
   
   // 「一覧に戻る」ボタンを探してクリック
   const backButton = page.getByRole('button', { name: '一覧に戻る' });
@@ -42,6 +42,6 @@ test('ブログ詳細ページから一覧に戻れる', async ({ page }) => {
   await backButton.click();
   
   // ブログ一覧ページに戻ったことを確認
-  await expect(page).toHaveURL('http://localhost:3000/blog');
+  await expect(page).toHaveURL('/blog');
   await expect(page.getByRole('heading', { name: 'Blog' })).toBeVisible();
 });

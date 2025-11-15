@@ -1,7 +1,7 @@
 import { test, expect } from '@playwright/test';
 
 test('トップページが主要セクションを表示できる', async ({ page }) => {
-  await page.goto('http://localhost:3000');
+  await page.goto('/');
   
   // ページタイトルの確認
   await expect(page).toHaveTitle('Yuzu portfolio');

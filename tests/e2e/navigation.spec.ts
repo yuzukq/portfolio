@@ -1,7 +1,7 @@
 import { test, expect } from '@playwright/test';
 
 test('About meセクションの「ブログを読む」ボタンでブログ一覧へ遷移できる', async ({ page }) => {
-  await page.goto('http://localhost:3000');
+  await page.goto('/');
   
   // 「ブログを読む」ボタンを探してクリック
   const blogButton = page.getByRole('button', { name: 'ブログを読む' });
@@ -9,12 +9,12 @@ test('About meセクションの「ブログを読む」ボタンでブログ一
   await blogButton.click();
   
   // ブログページに遷移したことを確認
-  await expect(page).toHaveURL('http://localhost:3000/blog');
+  await expect(page).toHaveURL('/blog');
   await expect(page.getByRole('heading', { name: 'Blog' })).toBeVisible();
 });
 
 test('ブログページのヘッダーからProfileリンクでトップページに戻れる', async ({ page }) => {
-  await page.goto('http://localhost:3000/blog');
+  await page.goto('/blog');
   
   // Profileボタンをクリック
   const profileButton = page.getByRole('button', { name: 'Profile' });
@@ -22,5 +22,5 @@ test('ブログページのヘッダーからProfileリンクでトップペー�
   await profileButton.click();
   
   // トップページのAboutセクションに遷移することを確認
-  await expect(page).toHaveURL('http://localhost:3000/#about');
+  await expect(page).toHaveURL('/#about');
 });
