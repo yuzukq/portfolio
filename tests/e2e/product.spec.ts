@@ -21,7 +21,7 @@ test('オーバーレイを閉じるボタンで閉じられる', async ({ page 
   await productCard.click();
   
   // オーバーレイが表示されることを確認
-  await expect(page.getByText('Recolle').first()).toBeVisible();
+  await expect(page.getByText('Better Portal Extension').first()).toBeVisible();
   await expect(page.getByText('スクリーンショット')).toBeVisible();
   
   // 閉じるボタンをクリック
